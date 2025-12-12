@@ -4,10 +4,12 @@ namespace App;
 
 final class Article
 {
-    public $title;
+    public string $title = '';
 
     public function getSlug()
     {
-        return "";
+        $slug = preg_replace('/\s+/', '_', trim($this->title));
+
+        return $slug;
     }
 }
