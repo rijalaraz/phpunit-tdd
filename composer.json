@@ -1,0 +1,14 @@
+{
+    "name": "rija/phpunit-tdd",
+    "description": "Test Driven Development",
+    "require-dev": {
+        "phpunit/phpunit": "^12.5",
+        "mockery/mockery": "^1.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "require": {}
+}
