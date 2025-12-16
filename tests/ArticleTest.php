@@ -27,4 +27,11 @@ final class ArticleTest extends TestCase
 
         $this->assertEquals("An_example_article", $this->article->getSlug());
     }
+
+    public function testSlugHasWhitespaceReplacedBySingleUnderscore()
+    {
+        $this->article->title = "An     example    \n    article";
+
+        $this->assertEquals("An_example_article", $this->article->getSlug());
+    }
 }
